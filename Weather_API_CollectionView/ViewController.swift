@@ -23,15 +23,16 @@ class ViewController: UIViewController , UICollectionViewDataSource , UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
         
         apiManager = ApiManager()
         apiManager.delegate = self
         
         WeatherCall()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
         
     }
     
